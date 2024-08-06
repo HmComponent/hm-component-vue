@@ -1,12 +1,13 @@
 {
-  "name": "hm-component-vue",
-  "version": "0.0.1",
+  "name": "hm-component-vue3",
+  "version": "0.0.13",
   "description": "Vue Component Library By hoeminJ",
   "author": {
     "name": "Hoemin Jeong",
     "email": "wony1102@naver.com"
   },
   "license": "MIT",
+  "homepage": "https://www.npmjs.com/package/hm-component-vue3",
   "repository": {
     "type": "git",
     "url": "https://github.com/HmComponent/hm-component-vue"
@@ -20,31 +21,25 @@
     "ui library",
     "components"
   ],
-  "main": "./dist/hm-component-vue.cjs.js",
-  "module": "./dist/hm-component-vue.es.js",
+  "main": "./dist/hm-component-vue3.cjs.js",
+  "module": "./dist/hm-component-vue3.es.js",
   "files": [
     "dist/",
     "src/"
   ],
   "exports": {
     ".": {
-      "import": "./dist/hm-component-vue.cjs.js",
-      "require": "./dist/hm-component-vue.es.js"
-    }
+      "import": "./dist/hm-component-vue3.cjs.js",
+      "require": "./dist/hm-component-vue3.es.js",
+      "types": "./dist/HmPlugin.d.ts"
+    },
+    "./style.css": "./dist/style.css"
   },
   "browser": {
-    ".": "./dist/hm-component-vue.es.js"
+    ".": "./dist/hm-component-vue3.es.js"
   },
-  "types": "./dist/",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build:vite": "run-p type-check \"build-only {@}\" --",
-    "build:npm": "vite build && vue-tsc --emitDeclarationOnly",
-    "preview": "vite preview",
-    "build-only": "vite build",
-    "type-check": "vue-tsc --build --force",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "build": "vite build && vue-tsc --emitDeclarationOnly",
     "format": "prettier --write src/"
   },
   "dependencies": {

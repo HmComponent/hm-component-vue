@@ -27,7 +27,7 @@ export default defineConfig({
 			entry: './src/HmPlugin.ts',
 			formats: ['es', 'cjs'],
 			name: 'HmPlugin',
-			fileName: (format) => `hm-component-vue.${format}.js`,
+			fileName: (format) => `hm-component-vue3.${format}.js`,
 		},
 		rollupOptions: {
 			external: ['vue'],
