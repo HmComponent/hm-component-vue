@@ -77,5 +77,3 @@ defineExpose({ getSelectedRow, setSelectedRow });
 		</hm-table-body>
 	</div>
 </template>
-
-<style scoped></style>
