@@ -1,7 +1,6 @@
 import type { App } from 'vue';
-import HmTable from './src/components/HmTable/HmTable.vue';
-import HmTableColumn from './src/components/HmTable/HmTableColumn.vue';
-import 'src/css.hm-component.scss';
+import '@/shared/css.hm-component.scss';
+import { HmTable, HmTableColumn } from '@/components';
 
 export default {
 	install: (app: App) => {

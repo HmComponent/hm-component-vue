@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { ObjectType } from '@/type.hm-component';
+import type { ObjectType } from '@/shared/type.hm-component';
 import { computed } from 'vue';
-import { getSize } from '@/util.hm-component';
+import { getSize } from '@/shared/util.hm-component';
 import type { ColumnInfoType } from '@/components/HmTable/type.hm-table';
 
 const props = defineProps<{

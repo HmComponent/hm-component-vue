@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, getCurrentInstance, onMounted, ref, type VNode } from 'vue';
-import type { ObjectType } from '@/type.hm-component';
+import type { ObjectType } from '@/shared/type.hm-component';
 
 defineProps<{ prop?: string }>();
 
