@@ -1,6 +1,6 @@
 {
   "name": "hm-component-vue3",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Vue Component Library By hoeminJ",
   "author": {
     "name": "Hoemin Jeong",
@@ -24,8 +24,7 @@
   "main": "./dist/hm-component-vue3.cjs.js",
   "module": "./dist/hm-component-vue3.es.js",
   "files": [
-    "dist/",
-    "src/"
+    "dist/"
   ],
   "exports": {
     ".": {
