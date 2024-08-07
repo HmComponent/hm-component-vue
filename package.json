@@ -1,0 +1,65 @@
+{
+  "name": "hm-component-vue3",
+  "version": "0.0.15",
+  "description": "Vue Component Library By hoeminJ",
+  "author": {
+    "name": "Hoemin Jeong",
+    "email": "wony1102@naver.com"
+  },
+  "license": "MIT",
+  "homepage": "https://www.npmjs.com/package/hm-component-vue3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HmComponent/hm-component-vue"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "vue components",
+    "vue framework",
+    "ui framework",
+    "ui library",
+    "components"
+  ],
+  "main": "./dist/hm-component-vue3.cjs.js",
+  "module": "./dist/hm-component-vue3.es.js",
+  "files": [
+    "dist/"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/hm-component-vue3.cjs.js",
+      "require": "./dist/hm-component-vue3.es.js",
+      "types": "./dist/HmPlugin.d.ts"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "browser": {
+    ".": "./dist/hm-component-vue3.es.js"
+  },
+  "scripts": {
+    "build": "vite build && vue-tsc --emitDeclarationOnly",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "sass": "^1.77.8",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.8.0",
+    "@tsconfig/node20": "^20.1.4",
+    "@types/node": "^20.12.5",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "@vue/eslint-config-typescript": "^13.0.0",
+    "@vue/tsconfig": "^0.5.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.23.0",
+    "npm-run-all2": "^6.1.2",
+    "prettier": "^3.2.5",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "typescript": "~5.4.0",
+    "vite": "^5.2.8",
+    "vue-tsc": "^2.0.11"
+  }
+}
