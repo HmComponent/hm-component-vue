@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { ColumnInfoType } from '@/components/HmTable/type.hm-table';
-import { getSize } from '@/util.hm-component';
+import { getSize } from '@/shared/util.hm-component';
 
 defineProps<{
 	rowHeight?: number | string;

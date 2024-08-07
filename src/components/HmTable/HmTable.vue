@@ -2,9 +2,9 @@
 import HmTableHeader from '@/components/HmTable/src/HmTableHeader.vue';
 import HmTableBody from '@/components/HmTable/src/HmTableBody.vue';
 import type { ColumnInfoType } from '@/components/HmTable/type.hm-table';
-import type { ObjectType } from '@/type.hm-component';
+import type { ObjectType } from '@/shared/type.hm-component';
 import { computed, ref, watch } from 'vue';
-import { getSize } from '@/util.hm-component';
+import { getSize } from '@/shared/util.hm-component';
 const props = withDefaults(
 	defineProps<{
 		width?: number | string;

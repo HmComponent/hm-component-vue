@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, getCurrentInstance, onMounted, ref, type VNode } from 'vue';
-import type { ObjectType } from '@/type.hm-component';
-import type { ColumnInfoType } from '@/components/HmTable/type.hm-table'
+import type { ObjectType } from '@/shared/type.hm-component';
+import type { ColumnInfoType } from '@/components/HmTable/type.hm-table';
 
 defineProps<{ prop?: string }>();
 
