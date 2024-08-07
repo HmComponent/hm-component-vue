@@ -18,7 +18,7 @@ defineProps<{
 				<th
 					v-for="{ id, headerAlign, label } in columnInfoList"
 					:key="id"
-					:style="{ textAlign: headerAlign }"
+					:style="{ textAlign: headerAlign !== undefined ? headerAlign : 'center' }"
 				>
 					<span>{{ label }}</span>
 				</th>

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, getCurrentInstance, onMounted, ref, type VNode } from 'vue';
 import type { ObjectType } from '@/type.hm-component';
+import type { ColumnInfoType } from '@/components/HmTable/type.hm-table'
 
 defineProps<{ prop?: string }>();
 
@@ -8,11 +9,11 @@ const instance = getCurrentInstance();
 
 const rowIdx = ref<number>(-1);
 const data = ref<ObjectType[]>([]);
-const columnInfoList = ref<ObjectType[]>([]);
+const columnInfoList = ref<ColumnInfoType[]>([]);
 
-const columnInfo = computed<ObjectType>(() => {
-	if (instance === null) return {};
-	return columnInfoList.value.find((header) => header['key'] === instance.vnode.key) || {};
+const columnInfo = computed<ColumnInfoType | undefined>(() => {
+	if (instance === null) return;
+	return columnInfoList.value.find((header) => header['id'] === instance.vnode.key);
 });
 
 const row = computed<{ [key: string]: any }>(() => {
@@ -35,12 +36,12 @@ onMounted(() => {
 	});
 
 	data.value = (parent.props.data as ObjectType[]) || [];
-	columnInfoList.value = (parent.props.columnInfoList as ObjectType[]) || [];
+	columnInfoList.value = (parent.props.columnInfoList as ColumnInfoType[]) || [];
 });
 </script>
 
 <template>
-	<td :style="{ textAlign: columnInfo['dataAlign'] }">
+	<td :style="{ textAlign: columnInfo !== undefined ? columnInfo['dataAlign'] : 'center' }">
 		<slot :row="row">
 			<span v-if="row && prop">
 				{{ row[prop] }}
