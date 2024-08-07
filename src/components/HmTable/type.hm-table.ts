@@ -1,7 +1,7 @@
 export type ColumnInfoType = {
 	id: string;
-	prop?: string;
 	label: string;
+	prop?: string;
 	width?: number;
 	headerAlign?: 'left' | 'center' | 'right';
 	dataAlign?: 'left' | 'center' | 'right';
