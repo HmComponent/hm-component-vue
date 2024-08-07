@@ -1,39 +1,64 @@
-# .
+<br><br/>
+<div align="center">
+   <a href="https://github.com/HmComponent/hm-component-vue" style="color: limegreen; font-size: 40px; font-weight: bold">Hm Component vue3</a><br>
+</div>
 
-This template should help get you started developing with Vue 3 in Vite.
+<p align="center">UI Components For Vue3</p>
 
-## Recommended IDE Setup
+<div align="center">
+    ![npm version](https://img.shields.io/badge/npm-10.5.2-red)
+    ![npm version](https://img.shields.io/badge/node-20.13.1-green)
+    ![npm version](https://img.shields.io/badge/vue-3.4.35-green)
+</div>
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+### Table of Contents
+ - [Features](#features)
+ - [Browser Support](#browser-support)
+ - [Quick Start](#quick-start)
+   - [Installing](#installing)
+   - [Usage](#usage)
+     - [Import](#import)
+     - [Components](#components)
 
-## Type Support for `.vue` Imports in TS
+# features
+ - Provide UI components available in [Vue3](https://vuejs.org/)<br>
+   [Vue3](https://vuejs.org/)에서 사용 가능한 UI 컴포넌트를 제공합니다.
+# Browser Support
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+| ![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome_48x48.png) | ![Edge](https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge/edge_48x48.png) |
+|---------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| Latest ✔                                                                                          | Latest ✔                                                                                    |
 
-## Customize configuration
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+# Quick Start
+This Section describes how to use Hm Component in your Vue3 project. <br>
+이 부분은 당신의 Vue3 프로젝트에 Hm Component 를 적용하는 방법에 대해 알려줄겁니다.
 
-## Project Setup
+## Installing
+Using Package Manager:
 
-```sh
-npm install
+```shell
+# NPM
+$ npm install hm-component-vue3
 ```
 
-### Compile and Hot-Reload for Development
+## Usage
+### Import
 
-```sh
-npm run dev
+```ts
+// main.ts
+import { createApp } from 'vue';
+import App from './App.vue';
+
+// Hm Component Vue3
+import HmPlugin from 'hm-component-vue3'
+import 'hm-component-vue3/style.css';
+
+const app = createApp(App);
+app.use(HmPlugin);
+
+app.mount('#app');
 ```
 
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+### Components
+ - [HmTable](/src/components/HmTable)
