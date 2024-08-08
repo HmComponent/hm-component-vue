@@ -7,10 +7,10 @@ const props = withDefaults(
 	defineProps<{
 		dataCountList: number[];
 		totalCount: number;
-		showingPageCount?: number;
+		pagerCount?: number;
 	}>(),
 	{
-		showingPageCount: 5,
+		pagerCount: 5,
 	},
 );
 
@@ -31,7 +31,7 @@ const onChangeStatus = () => {
 		<HmPager
 			v-model="currPage"
 			:total-count="totalCount"
-			:showing-page-count="showingPageCount"
+			:pager-count="pagerCount"
 			@clickPage="onChangeStatus"
 		/>
 		<HmDataCountSelect
