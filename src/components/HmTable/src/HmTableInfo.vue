@@ -9,7 +9,7 @@ defineProps<{
 </script>
 
 <template>
-	<table class="hm-table-column-header">
+	<table class="hm-table-info">
 		<colgroup v-for="{ id, width } in columnInfoList" :key="id">
 			<col :style="{ width: getSize(width) }" />
 		</colgroup>
