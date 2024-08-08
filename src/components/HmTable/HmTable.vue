@@ -80,6 +80,8 @@ defineExpose({ getSelectedRow, setSelectedRow });
 				<slot />
 			</hm-table-content>
 		</div>
-		<div class="hm-table-footer"></div>
+		<div class="hm-table-footer">
+			<slot name="footer" />
+		</div>
 	</div>
 </template>
