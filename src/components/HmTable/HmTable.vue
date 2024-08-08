@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import HmTableHeader from '@/components/HmTable/src/HmTableHeader.vue';
-import HmTableBody from '@/components/HmTable/src/HmTableBody.vue';
+import HmTableInfo from '@/components/HmTable/src/HmTableInfo.vue';
+import HmTableContent from '@/components/HmTable/src/HmTableContent.vue';
 import type { ColumnInfoType } from '@/components/HmTable/type.hm-table';
 import type { ObjectType } from '@/shared/type.hm-component';
 import { computed, ref, watch } from 'vue';
@@ -62,18 +62,24 @@ defineExpose({ getSelectedRow, setSelectedRow });
 
 <template>
 	<div class="hm-table" :style="{ width: getSize(width), height: tableHeight }">
-		<HmTableHeader :columnInfoList="columnInfoList" :row-height="rowHeight" />
-		<hm-table-body
-			v-model="selectedRowIdx"
-			:columnInfoList="columnInfoList"
-			:data="data"
-			:height="height"
-			:rowHeight="rowHeight"
-			:useSelect="useSelect"
-			@click-row="onClickRow"
-			@dbl-click-row="onDblClickRow"
-		>
-			<slot />
-		</hm-table-body>
+		<div class="hm-table-header">
+			<slot name="header" />
+		</div>
+		<div class="hm-table-body">
+			<HmTableInfo :columnInfoList="columnInfoList" :row-height="rowHeight" />
+			<hm-table-content
+				v-model="selectedRowIdx"
+				:columnInfoList="columnInfoList"
+				:data="data"
+				:height="height"
+				:rowHeight="rowHeight"
+				:useSelect="useSelect"
+				@click-row="onClickRow"
+				@dbl-click-row="onDblClickRow"
+			>
+				<slot />
+			</hm-table-content>
+		</div>
+		<div class="hm-table-footer"></div>
 	</div>
 </template>
