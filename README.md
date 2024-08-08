@@ -62,3 +62,4 @@ app.mount('#app');
 
 ### Components
  - [HmTable](/src/components/HmTable)
+ - [HmPagination](/src/components/HmPagination)
