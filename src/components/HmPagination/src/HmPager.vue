@@ -5,7 +5,7 @@ const currPage = defineModel<number>({ required: true });
 
 const props = defineProps<{
 	totalCount: number;
-	showingPageCount: number;
+	pagerCount: number;
 }>();
 
 const emits = defineEmits<{
@@ -13,15 +13,15 @@ const emits = defineEmits<{
 }>();
 
 const pageList = ref<number[]>(Array.from(Array(props.totalCount).keys()).map((i) => i + 1));
-const maxShowingPageIdx = ref<number>(props.totalCount / props.showingPageCount);
+const maxShowingPageIdx = ref<number>(props.totalCount / props.pagerCount);
 const showingPageIdx = ref<number>(0);
 
 const showingPageList = computed<number[]>(() => {
 	const result = pageList.value.slice(1, pageList.value.length - 1);
 
-	const sIdx = showingPageIdx.value * props.showingPageCount;
+	const sIdx = showingPageIdx.value * props.pagerCount;
 
-	return result.slice(sIdx, sIdx + props.showingPageCount);
+	return result.slice(sIdx, sIdx + props.pagerCount);
 });
 
 const decreaseShowingPageIdx = () => {
