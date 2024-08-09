@@ -6,9 +6,9 @@
 <p align="center">UI Components For Vue3</p>
 
 <div align="center">
-    ![npm version](https://img.shields.io/badge/npm-10.5.2-red)
-    ![npm version](https://img.shields.io/badge/node-20.13.1-green)
-    ![npm version](https://img.shields.io/badge/vue-3.4.35-green)
+    <img src="https://img.shields.io/badge/npm-10.5.2-red" alt="npm-10.5.2" />
+    <img src="https://img.shields.io/badge/node-20.13.1-darkgreen" alt="node-20.13.1" />
+    <img src="https://img.shields.io/badge/vue-3.4.35-lightgreen" alt="vue-3.4.35" />
 </div>
 
 ### Table of Contents
