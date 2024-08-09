@@ -24,7 +24,7 @@ export default defineConfig({
 	build: {
 		cssCodeSplit: false,
 		lib: {
-			entry: './src/HmPlugin.ts',
+			entry: './src/hm-plugin/index.ts',
 			formats: ['es', 'cjs'],
 			name: 'HmPlugin',
 			fileName: (format) => `hm-component-vue3.${format}.js`,

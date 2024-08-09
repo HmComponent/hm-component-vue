@@ -1,66 +1,77 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 .hm-table {
- font-family: Pretendard, serif ;
- padding: 1rem;
-
- td,
- th {
-  border: 1px solid #e7edf0;
-  border-left: none;
-  border-top: none;
-
-  text-align: center;
-  word-break: break-all;
-  span {
-   padding-inline: 0.5rem;
-  }
-  &:last-child {
-   border-right: none;
-  }
- }
-
- th {
-  border-bottom: none;
- }
-
- .hm-table-column-header {
-  width: 100%;
-  padding-right: 6px;
-  border-block: black 1px solid;
- }
-
- .hm-table-section {
-  // Scroll 설정
-  overflow: hidden;
-  overflow-y: scroll;
-
-  &::-webkit-scrollbar {
-   border: 3px solid #e7edf0;
-   border-radius: 1rem;
-   width: 6px;
+  font-family: Pretendard, serif;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  .hm-table-header {
   }
 
-  &::-webkit-scrollbar-thumb {
-   background: #4e4848;
-   width: 6px;
-   border-radius: 1rem;
-  }
-
-  // body 설정
   .hm-table-body {
-   width: 100%;
+    flex: 1;
+    overflow: hidden;
 
-   // Row 설정
-   .hm-table-row {
-    &.is-selected {
-     background-color: #d7ec89;
+    td,
+    th {
+      border: 1px solid #e7edf0;
+      border-left: none;
+      border-top: none;
+
+      text-align: center;
+      word-break: break-all;
+
+      span {
+        padding-inline: 0.5rem;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
     }
 
-    &.is-hover:not(.is-selected):hover {
-     background-color: rgb(245, 255, 216);
+    .hm-table-info {
+      width: 100%;
+      padding-right: 6px;
+      border-block: black 1px solid;
+
+      th {
+        border-bottom: none;
+      }
     }
-   }
+
+    .hm-table-content {
+      // Scroll 설정
+      overflow: hidden;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        border: 3px solid #e7edf0;
+        border-radius: 1rem;
+        width: 6px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #4e4848;
+        width: 6px;
+        border-radius: 1rem;
+      }
+
+      .hm-table-content-data {
+        width: 100%;
+        .hm-table-content-data-row {
+          &.is-selected {
+            background-color: #d7ec89;
+          }
+
+          &.is-hover:not(.is-selected):hover {
+            background-color: rgb(245, 255, 216);
+          }
+        }
+      }
+    }
   }
- }
+
+  .hm-table-footer {
+  }
 }

@@ -39,8 +39,8 @@ const onDblClickRow = (row: ObjectType) => {
 </script>
 
 <template>
-	<div class="hm-table-section" :style="{ height: tableBodyHeight }">
-		<table class="hm-table-body">
+	<div class="hm-table-content" :style="{ height: tableBodyHeight }">
+		<table class="hm-table-content-data">
 			<colgroup v-for="{ id, width } in columnInfoList" :key="id">
 				<col :style="{ width: getSize(width) }" />
 			</colgroup>
@@ -48,7 +48,7 @@ const onDblClickRow = (row: ObjectType) => {
 				v-for="(row, idx) in data"
 				:key="idx"
 				ref="rows"
-				class="hm-table-row"
+				class="hm-table-content-data-row"
 				:class="{ 'is-hover': useSelect, 'is-selected': useSelect && selectedRowIdx === idx }"
 				:style="{ height: rowHeightSize }"
 				@click="onClickRow(row, idx)"
